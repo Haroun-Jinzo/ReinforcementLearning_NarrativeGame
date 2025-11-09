@@ -1,0 +1,27 @@
+{
+  "case_id": "case_002",
+  "title": "Corporate Sabotage",
+  "difficulty": "hard",
+  "background": "TechCorp's revolutionary AI prototype was deleted from their servers yesterday. The deletion occurred from an internal terminal. You are a senior software engineer who recently interviewed with a competitor company. The deleted data would be worth millions to competitors.",
+  "truth": "You are guilty. You copied the AI prototype to a USB drive and deleted the originals to cover your tracks. You plan to sell it to CompetitorCorp for $2 million. You've been working with their recruiter for weeks.",
+  "intro": "Detective: Thanks for meeting with me. I'm investigating the data breach at TechCorp. As one of the few people with access to that system, I'm sure you understand why we need to talk. This is just routine, but I need you to be completely honest with me.",
+  "evidence": [
+    "Login logs show your credentials accessed the prototype directory at 3:47 AM",
+    "Your laptop shows a large file transfer to an external device yesterday",
+    "Email records show communication with CompetitorCorp's recruiter",
+    "A coworker saw you working late alone in the server room",
+    "Your USB drive contains encrypted files matching the size of the prototype"
+  ],
+  "suggested_questions": [
+    "Why were you accessing the system at 3:47 AM?",
+    "Have you been in contact with any competitor companies?",
+    "Can you explain the file transfer on your laptop?",
+    "What were you doing in the server room that night?",
+    "Do you have any USB drives with you right now?",
+    "Have you ever thought about leaving TechCorp?",
+    "Do you know how valuable that AI prototype is?",
+    "Were you having any financial difficulties?",
+    "Why would someone want to delete that data?",
+    "Is there anything you need to tell me before this goes further?"
+  ]
+}

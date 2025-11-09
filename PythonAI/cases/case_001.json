@@ -1,0 +1,27 @@
+{
+  "case_id": "case_001",
+  "title": "The Missing Artifact",
+  "difficulty": "medium",
+  "background": "Last night, the famous Celestial Diamond was stolen from the National Museum. The theft occurred between 9 PM and midnight. The security system was disabled for exactly 12 minutes during that time. You are a museum employee who had access to the security room.",
+  "truth": "You are guilty. You disabled the security system and stole the diamond. You planned this for months and hid the diamond in a safety deposit box. You're trying to act innocent and cooperative while maintaining your alibi.",
+  "intro": "Detective: Thank you for coming in. I know this must be stressful, but we need to ask everyone who had access to the museum that night. Can you help us understand what happened?",
+  "evidence": [
+    "Security logs show your access card was used in the security room at 9:47 PM",
+    "Security camera footage shows someone matching your build near the diamond exhibit",
+    "Your fingerprints were found on the security panel",
+    "A witness saw your car leaving the museum parking lot at 11:30 PM",
+    "Your bank records show you researched safety deposit boxes the day before"
+  ],
+  "suggested_questions": [
+    "Where were you last night between 9 PM and midnight?",
+    "Why was your access card used in the security room?",
+    "Do you recognize yourself in this security footage?",
+    "Can anyone verify your whereabouts?",
+    "Why were you at the museum so late?",
+    "What do you know about the security system?",
+    "Have you ever handled the diamond exhibit before?",
+    "Do you have any financial troubles we should know about?",
+    "Why did you research safety deposit boxes?",
+    "Is there anything you want to tell me before we continue?"
+  ]
+}

@@ -1,0 +1,60 @@
+## Essential Auto-Generated Directories
+/[Dd]etective[Gg]ame/[Ll]ibrary/
+/[Dd]etective[Gg]ame/[Tt]emp/
+/[Dd]etective[Gg]ame/[Oo]bj/
+/[Dd]etective[Gg]ame/[Bb]uild/
+/[Dd]etective[Gg]ame/[Bb]uilds/
+/[Dd]etective[Gg]ame/[Ll]ogs/
+
+## Unity-Specific Cache & Settings
+/[Dd]etective[Gg]ame/[Aa]ssets/[Ss]treaming[Aa]ssets/
+/[Dd]etective[Gg]ame/[Pp]roject[Ss]ettings/[Uu]ser[Ss]ettings/
+*.pidb
+*.pidb.meta
+*.pdb
+*.mdb
+
+# ===============================================
+# 🐍 Python Project Files (PythonAI)
+# ===============================================
+## Virtual Environments
+/[Pp]ython[Aa]i/.venv/
+/[Pp]ython[Aa]i/venv/
+/[Pp]ython[Aa]i/env/
+
+## Byte-Compiled Files
+__pycache__/
+*.py[co]
+*$py.class
+
+## Distribution and Packaging
+build/
+dist/
+*.egg-info/
+.coverage
+.tox/
+.pytest_cache/
+
+# ===============================================
+# 💻 IDE, OS, and General Files (Root Level)
+# ===============================================
+## OS Files
+.DS_Store
+Thumbs.db
+
+## IDE/Editor Files (Applies everywhere)
+# Ignore Visual Studio Solution Files
+*.sln
+*.csproj
+*.user
+# Ignore JetBrains/PyCharm/Rider Settings
+.idea/
+# Ignore VS Code Settings
+.vscode/
+
+## Large Data/Models (often generated during training/testing)
+*.onnx
+*.safetensors
+*.bin
+*.pt
+*.pth
