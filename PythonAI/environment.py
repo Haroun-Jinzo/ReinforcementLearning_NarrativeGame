@@ -111,6 +111,12 @@ class DetectiveEnv(gym.Env):
             truncated: Whether episode was cut off (max steps)
             info: Additional information
         """
+        # Convert action to int if it's a numpy array
+        if isinstance(action, np.ndarray):
+            action = int(action.item())
+        else:
+            action = int(action)
+        
         # Validate action
         assert self.action_space.contains(action), f"Invalid action: {action}"
         
@@ -250,8 +256,9 @@ class DetectiveEnv(gym.Env):
         
         # Check for flip-flopping strategies
         recent_actions = [r['action'] for r in self.previous_responses[-3:]]
-        int_recent_actions = int(recent_actions)
-        if len(set(int_recent_actions)) == len(int_recent_actions) and len(int_recent_actions) >= 3:
+        
+        # Convert to set for unique count - actions are already ints now
+        if len(set(recent_actions)) == len(recent_actions) and len(recent_actions) >= 3:
             # Changed strategy every single time - suspicious
             penalty += 0.3
         
@@ -283,25 +290,25 @@ class DetectiveEnv(gym.Env):
             3: -0.03,  # Admit minor - seems cooperative
             4: -0.05   # Full cooperation - seems innocent
         }
-        action_int = int(action)
-        change = base_changes[action_int]
+        
+        change = base_changes[action]
         
         # Modify based on question type
         if question_type == 0:  # Direct accusation
-            if action_int == 0:  # Denying direct accusation
+            if action == 0:  # Denying direct accusation
                 change += 0.05  # Extra suspicious
-            elif action_int == 4:  # Being cooperative when accused
+            elif action == 4:  # Being cooperative when accused
                 change -= 0.03  # Seems more innocent
         
         elif question_type == 1:  # About evidence
             evidence_count = np.sum(self.evidence_revealed)
-            if evidence_count > 2 and action_int == 0:
+            if evidence_count > 2 and action == 0:
                 # Denying when lots of evidence exists
                 change += 0.07
         
         # Late-game effects
         if self.questions_asked > 7:
-            if action_int == 2:  # Deflecting late is very suspicious
+            if action == 2:  # Deflecting late is very suspicious
                 change += 0.06
         
         return change
@@ -336,6 +343,11 @@ class DetectiveEnv(gym.Env):
             reward -= 1.0
         elif self.suspicion_level < 0.4:
             reward += 0.5
+        
+        if self.suspicion_level < 0.15:
+            reward -= 3.0
+        if 0.3 < self.suspicion_level < 0.5:
+            reward += 5.0 
         
         # Small step penalty to encourage ending episodes
         reward -= 0.1

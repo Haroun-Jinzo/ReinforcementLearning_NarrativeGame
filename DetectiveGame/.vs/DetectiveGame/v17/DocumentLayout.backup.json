@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|c:\\users\\jinzo\\desktop\\polytechnique\\5eme\\ai for games\\projectv2\\detectivegame\\assets\\scripts\\new folder\\servermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\new folder\\servermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\assets\\scripts\\new folder\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\new folder\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\assets\\scripts\\new folder\\evidencebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1EC090E2-5B13-D30E-5024-D1CF25A5A009}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\new folder\\evidencebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\GameManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\SuspicionMeterAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\SuspicionMeterAnimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\EvidenceItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\EvidenceItem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\ConversationMessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\ConversationMessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\PythonConnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\PythonConnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EvidenceButton.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\EvidenceButton.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\New Folder\\EvidenceButton.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\EvidenceButton.cs",
+              "RelativeToolTip": "Assets\\Scripts\\New Folder\\EvidenceButton.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T18:14:08.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\New Folder\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\New Folder\\GameManager.cs",
+              "ViewState": "AgIAAKUAAAAAFCc0R9cIwF8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T17:19:15.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServerManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\ServerManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\New Folder\\ServerManager.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\New Folder\\ServerManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\New Folder\\ServerManager.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAALsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-06T17:17:38.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SuspicionMeterAnimator.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\SuspicionMeterAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SuspicionMeterAnimator.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\SuspicionMeterAnimator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SuspicionMeterAnimator.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:40:59.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EvidenceItem.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\EvidenceItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\EvidenceItem.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\EvidenceItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\EvidenceItem.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAAEAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:39:32.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConversationMessage.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\ConversationMessage.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ConversationMessage.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\ConversationMessage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ConversationMessage.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T17:39:11.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PythonConnector.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\PythonConnector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PythonConnector.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\PythonConnector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PythonConnector.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAAAMUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T14:10:55.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\Jinzo\\Desktop\\Polytechnique\\5eme\\AI for games\\ProjectV2\\DetectiveGame\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T14:09:32.822Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -348,8 +348,8 @@ def accuse():
         
         # Determine if suspect is caught
         caught = (
-            session['suspicion'] > 0.65 or
-            session['contradictions'] >= 3
+            session['suspicion'] > 0.45 or
+            session['contradictions'] >= 2
         )
         
         session['caught'] = caught

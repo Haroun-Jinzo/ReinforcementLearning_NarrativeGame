@@ -38,15 +38,49 @@ def plot_training_progress(log_dir='logs', output_file='training_progress.png'):
         print(f"❌ Failed to load CSV: {e}")
         return False
     
-    # Check required columns
-    required_cols = ['total_timesteps', 'rollout/ep_rew_mean', 
-                     'rollout/ep_len_mean', 'train/policy_loss', 'train/value_loss']
+    # Check if we have enough data
+    if len(data) < 2:
+        print(f"⚠️ Not enough training data yet ({len(data)} rows)")
+        print("Run training for more timesteps to generate meaningful plots")
+        return False
     
-    missing_cols = [col for col in required_cols if col not in data.columns]
-    if missing_cols:
-        print(f"⚠️ Missing columns: {missing_cols}")
+    # Map column names to standard names
+    # Handle both 'time/total_timesteps' and 'total_timesteps' formats
+    if 'time/total_timesteps' in data.columns:
+        timesteps = data['time/total_timesteps']
+    elif 'total_timesteps' in data.columns:
+        timesteps = data['total_timesteps']
+    else:
+        print(f"❌ No timesteps column found!")
         print(f"Available columns: {list(data.columns)}")
         return False
+    
+    # Check for required data columns
+    if 'rollout/ep_rew_mean' not in data.columns:
+        print(f"❌ Missing rollout/ep_rew_mean column")
+        return False
+    
+    if 'rollout/ep_len_mean' not in data.columns:
+        print(f"❌ Missing rollout/ep_len_mean column")
+        return False
+    
+    reward_mean = data['rollout/ep_rew_mean']
+    ep_length = data['rollout/ep_len_mean']
+    
+    # Get loss columns (they may vary)
+    if 'train/policy_gradient_loss' in data.columns:
+        policy_loss = data['train/policy_gradient_loss']
+    elif 'train/policy_loss' in data.columns:
+        policy_loss = data['train/policy_loss']
+    else:
+        print("⚠️ No policy loss column found, using zeros")
+        policy_loss = pd.Series([0] * len(data))
+    
+    if 'train/value_loss' in data.columns:
+        value_loss = data['train/value_loss']
+    else:
+        print("⚠️ No value loss column found, using zeros")
+        value_loss = pd.Series([0] * len(data))
     
     # Create figure with 2x2 subplots
     fig, axes = plt.subplots(2, 2, figsize=(16, 10))
@@ -61,18 +95,14 @@ def plot_training_progress(log_dir='logs', output_file='training_progress.png'):
         'value': '#C73E1D'
     }
     
-    timesteps = data['total_timesteps']
-    
     # Plot 1: Episode Reward (Top Left)
     ax1 = axes[0, 0]
-    reward_mean = data['rollout/ep_rew_mean']
     
     ax1.plot(timesteps, reward_mean, 
              label='Average Reward', color=colors['reward'], linewidth=2.5, alpha=0.9)
     
     # Add smoothed trend line
     if len(reward_mean) > 10:
-        # Use pandas rolling mean to smooth without scipy dependency
         window = min(20, max(3, len(reward_mean) // 10))
         smoothed = reward_mean.rolling(window=window, center=True, min_periods=1).mean()
         ax1.plot(timesteps, smoothed,
@@ -107,7 +137,6 @@ def plot_training_progress(log_dir='logs', output_file='training_progress.png'):
     
     # Plot 2: Episode Length (Top Right)
     ax2 = axes[0, 1]
-    ep_length = data['rollout/ep_len_mean']
     
     ax2.plot(timesteps, ep_length,
              color=colors['length'], linewidth=2.5, alpha=0.9)
@@ -124,12 +153,11 @@ def plot_training_progress(log_dir='logs', output_file='training_progress.png'):
     
     # Plot 3: Policy Loss (Bottom Left)
     ax3 = axes[1, 0]
-    policy_loss = data['train/policy_loss']
     
     ax3.plot(timesteps, policy_loss,
              color=colors['policy'], linewidth=2.5, alpha=0.9)
     ax3.set_xlabel('Training Timesteps', fontsize=13, fontweight='bold')
-    ax3.set_ylabel('Policy Loss', fontsize=13, fontweight='bold')
+    ax3.set_ylabel('Policy Gradient Loss', fontsize=13, fontweight='bold')
     ax3.set_title('Policy Loss Over Time', fontsize=14, fontweight='bold', pad=10)
     ax3.grid(True, alpha=0.3, linestyle=':', linewidth=0.8)
     ax3.spines['top'].set_visible(False)
@@ -137,7 +165,6 @@ def plot_training_progress(log_dir='logs', output_file='training_progress.png'):
     
     # Plot 4: Value Loss (Bottom Right)
     ax4 = axes[1, 1]
-    value_loss = data['train/value_loss']
     
     ax4.plot(timesteps, value_loss,
              color=colors['value'], linewidth=2.5, alpha=0.9)
@@ -191,7 +218,13 @@ def plot_multiple_runs(log_dirs, labels, output_file='training_comparison.png'):
         
         if os.path.exists(progress_file):
             data = pd.read_csv(progress_file)
-            plt.plot(data['total_timesteps'], data['rollout/ep_rew_mean'],
+            # Handle column name variations
+            if 'time/total_timesteps' in data.columns:
+                timesteps_col = 'time/total_timesteps'
+            else:
+                timesteps_col = 'total_timesteps'
+            
+            plt.plot(data[timesteps_col], data['rollout/ep_rew_mean'],
                     label=label, linewidth=2.5, alpha=0.8, color=colors[i % len(colors)])
             print(f"✅ Loaded {label}: {len(data)} steps")
         else:
