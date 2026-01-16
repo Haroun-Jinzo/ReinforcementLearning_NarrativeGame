@@ -52,6 +52,9 @@ Thumbs.db
 # Ignore VS Code Settings
 .vscode/
 
+# Ignore pre trained models
+./models/
+
 ## Large Data/Models (often generated during training/testing)
 *.onnx
 *.safetensors
