@@ -7,8 +7,9 @@
   "intro": "Detective: Thank you for coming in. I know this must be stressful, but we need to ask everyone who had access to the museum that night. Can you help us understand what happened?",
   "evidence": [
     "Security logs show your access card was used in the security room at 9:47 PM",
-    "Security camera footage shows someone matching your build near the diamond exhibit",
+    "Security camera footage shows someone matching your build near the diamond exhibit at 10:05PM",
     "Your fingerprints were found on the security panel",
+    "security system was disabled for 12 minutes starting at 9:48 PM",
     "A witness saw your car leaving the museum parking lot at 11:30 PM",
     "Your bank records show you researched safety deposit boxes the day before"
   ],

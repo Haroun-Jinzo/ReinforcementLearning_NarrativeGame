@@ -149,7 +149,7 @@ def calculate_suspicion_increase(strategy: int, question_type: int,
     
     base_changes = {
         0: 0.08,   # Deny - suspicious
-        1: 0.02,   # Partial truth - slightly suspicious
+        1: 0.04,   # Partial truth - slightly suspicious
         2: 0.05,   # Deflect - moderately suspicious
         3: -0.03,  # Admit - seems cooperative
         4: -0.05   # Cooperate - seems innocent
@@ -217,16 +217,6 @@ def start_game():
 
 @app.route('/ask_question', methods=['POST'])
 def ask_question():
-    """
-    Process a detective question and generate AI suspect response.
-    
-    Flow:
-    1. Receive question from Unity
-    2. Use RL agent to choose strategy
-    3. Use Gemini to generate natural language response
-    4. Update session state
-    5. Return response to Unity
-    """
     try:
         data = request.json
         session_id = data['session_id']
@@ -348,7 +338,7 @@ def accuse():
         
         # Determine if suspect is caught
         caught = (
-            session['suspicion'] > 0.45 or
+            session['suspicion'] > 0.38 or
             session['contradictions'] >= 2
         )
         

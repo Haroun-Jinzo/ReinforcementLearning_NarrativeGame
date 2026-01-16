@@ -6,36 +6,6 @@ import json
 
 
 class DetectiveEnv(gym.Env):
-    """
-    Custom Environment for training an AI suspect in a detective game.
-    
-    The agent must:
-    - Answer detective's questions strategically
-    - Maintain consistency in responses
-    - Balance between seeming innocent and not revealing truth
-    - Avoid contradictions
-    
-    Observation Space:
-        - conversation_history: Last 5 Q&A pairs (encoded)
-        - evidence_revealed: Binary array of which evidence has been shown
-        - suspicion_level: Current suspicion (0.0 to 1.0)
-        - questions_remaining: How many questions left (0 to 10)
-        - contradiction_count: Number of detected contradictions (0 to 5)
-        
-    Action Space:
-        - 0: Deny Everything (act offended, firmly deny)
-        - 1: Partial Truth (admit minor details, hide important facts)
-        - 2: Deflect (change subject, vague answers, redirect)
-        - 3: Admit Minor Detail (seem cooperative, build trust)
-        - 4: Full Cooperation (act helpful, maintain innocence)
-        
-    Rewards:
-        - Not caught at end: +10 - (suspicion_level * 5)
-        - Caught: -20
-        - Contradiction detected: -5 per contradiction
-        - Suspicion increased: -2 per increase
-        - Suspicion decreased: +1 (successful deflection)
-    """
     
     metadata = {'render_modes': ['human', 'ansi']}
     
@@ -98,19 +68,6 @@ class DetectiveEnv(gym.Env):
         return observation, info
     
     def step(self, action: int) -> Tuple[Dict, float, bool, bool, Dict]:
-        """
-        Execute one step in the environment.
-        
-        Args:
-            action: The strategy the AI suspect chooses (0-4)
-            
-        Returns:
-            observation: Current state
-            reward: Reward for this action
-            terminated: Whether episode ended (caught or escaped)
-            truncated: Whether episode was cut off (max steps)
-            info: Additional information
-        """
         # Convert action to int if it's a numpy array
         if isinstance(action, np.ndarray):
             action = int(action.item())
@@ -222,15 +179,6 @@ class DetectiveEnv(gym.Env):
         return encoding
     
     def _generate_question(self) -> int:
-        """
-        Simulate detective asking a question.
-        Returns question type (0-4):
-        0: Direct accusation
-        1: About evidence
-        2: Timeline/alibi
-        3: Relationship question
-        4: General/trap question
-        """
         # Early game: more general questions
         # Late game: more direct accusations with evidence
         
@@ -245,10 +193,6 @@ class DetectiveEnv(gym.Env):
             return np.random.choice([0, 1, 2, 3, 4], p=[0.4, 0.3, 0.15, 0.1, 0.05])
     
     def _check_consistency(self, action: int, question_type: int) -> float:
-        """
-        Check if current action is consistent with previous responses.
-        Returns penalty value (0 = consistent, higher = more inconsistent)
-        """
         if len(self.previous_responses) < 2:
             return 0.0  # Not enough history
         
@@ -285,7 +229,7 @@ class DetectiveEnv(gym.Env):
         # Base suspicion changes for each strategy
         base_changes = {
             0: 0.08,   # Deny everything - suspicious
-            1: 0.02,   # Partial truth - slightly suspicious
+            1: 0.04,   # Partial truth - slightly suspicious
             2: 0.05,   # Deflect - moderately suspicious
             3: -0.03,  # Admit minor - seems cooperative
             4: -0.05   # Full cooperation - seems innocent

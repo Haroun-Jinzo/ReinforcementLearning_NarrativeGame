@@ -1,31 +1,13 @@
-"""
-Gemini Client - Natural Language Generation for AI Suspect
-Week 3: Integrate Gemini API with RL agent strategies
-
-IMPORTANT: The suspect is GUILTY but trying to avoid detection.
-All strategies are forms of DECEPTION - never admit to the actual crime!
-"""
-
 import os
 import google.generativeai as genai
 from typing import List, Dict, Optional
 import json
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
-genai.configure(api_key="AIzaSyD0X-_jP6Kzpk9bWnJtJ4r49HneirXWgP8")
-
-# Try generation directly
-model = genai.GenerativeModel('gemini-2.0-flash-exp')
-response = model.generate_content("Say hello")
-print(response.text)
-
-print("Available models:")
-for model in genai.list_models():
-    if 'generateContent' in model.supported_generation_methods:
-        print(f"  ✅ {model.name}")
-
+key = os.getenv('GEMINI_API_KEY')
+print(f"Loaded key: {key}")
+print(f"First 15 chars: {key[:15] if key else 'None'}")
 
 class GeminiClient:
     """
@@ -95,7 +77,7 @@ class GeminiClient:
         }
     }
     
-    def __init__(self, api_key: Optional[str] = None, model_name: str = "gemini-2.0-flash-exp"):
+    def __init__(self, api_key: Optional[str] = None, model_name: str = "gemini-2.5-flash"):
         """
         Initialize Gemini client.
         
